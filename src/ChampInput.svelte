@@ -5,17 +5,9 @@
   export let champList;
 </script>
 
-<style>
-  div {
-    max-width: 500px;
-  }
-</style>
-
-<div>
-  <AutoComplete 
-    items={champList}
-    bind:value={value}
-    labelFieldName="name"
-    valueFieldName="id"
-  />
-</div>
+<AutoComplete 
+  items={champList}
+  bind:value={value}
+  labelFieldName="name"
+  valueFieldName="id"
+/>

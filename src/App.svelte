@@ -47,11 +47,34 @@
 	}
 </script>
 
+<style>
+	.main {
+		text-align: center;
+	}
+	.form {
+		display: flex;
+		justify-content: center;
+		width: 600px;
+		margin: auto;
+	}
+	.ChampInput {
+		height: 30px;
+		text-align: left;
+	}
+</style>
+
 <svelte:window on:keydown={handleKeydown}/>
 
-<h1>Find a Champion's Lolaytics Aram Page</h1>
+<div class="main">
+	<h1>Find a Champion's Lolaytics Aram Page</h1>
 
-<ChampInput bind:value={champName} champList={champList}/>
-<button on:click|preventDefault={goToPage}> 
-	Go
-</button>
+	<div class="form">
+		<div class='ChampInput'>
+			<ChampInput bind:value={champName} champList={champList}/>
+		</div>
+		<div style="width: 0.5em"/>
+		<button on:click|preventDefault={goToPage}> 
+			Go
+		</button>
+	</div>
+</div>
