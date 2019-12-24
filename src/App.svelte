@@ -3,11 +3,7 @@
 	import ChampInput from './ChampInput.svelte';
 
 	let champName = '';
-	$: console.log(`champName changed to: '${champName}'`);
-
 	let champList = [];
-	$: console.log(`champList changed:`);
-	$: console.log({champList});
 
 	onMount(async () => {
 		let latestPatch = await fetchLatestPatch();
@@ -24,7 +20,6 @@
 		let response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latestPatch+'.1'}/data/en_US/champion.json`)
 		let json = await response.json();
 		let newChampList = [];
-		console.log(json);
 		for (let champ in json.data) {
 			newChampList.push({
 				id: json.data[champ].id.toLowerCase(), 
