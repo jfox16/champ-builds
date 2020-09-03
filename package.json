@@ -16,7 +16,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sapper": "^0.27.9",
+    "sapper": "^0.27.11",
     "simple-svelte-autocomplete": "^1.0.6",
     "sirv-cli": "^0.4.4"
   }
